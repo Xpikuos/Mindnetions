@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="BallyControllerSimplificado.Cara.Ojo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BallyControllerSimplificado.Cara"
+             mc:Ignorable="d" Margin="10">
+    <Grid>
+        <Rectangle x:Name="Globo" x:FieldModifier="public"  Fill="#FFF4F4F5" RadiusX="15" RadiusY="15" HorizontalAlignment="Left" Height="{Binding F, FallbackValue=100, Mode=TwoWay}" Stroke="Black" VerticalAlignment="Top" Width="{Binding G, FallbackValue=115, Mode=TwoWay}" Margin="10,74,0,0"/>
+        <Rectangle x:Name="Iris" x:FieldModifier="public" Fill="DarkBlue" HorizontalAlignment="Left" Height="{Binding O,FallbackValue=67, Mode=TwoWay}" Margin="34,0,0,19" RadiusY="15" RadiusX="15" Stroke="Black" Width="{Binding R,FallbackValue=70, Mode=TwoWay}" VerticalAlignment="Bottom"/>
+        <Rectangle x:Name="Pupila" x:FieldModifier="public" Fill="White" HorizontalAlignment="Right" Height="{Binding M,FallbackValue=25, Mode=TwoWay}" Margin="0,0,46,35" RadiusY="5" RadiusX="5" Stroke="Black" VerticalAlignment="Bottom" Width="{Binding H,FallbackValue=29}"/>
+        <Rectangle x:Name="PapadoSuperior" x:FieldModifier="public" Fill="Orange" HorizontalAlignment="Left" Height="{Binding P,FallbackValue=41, Mode=TwoWay}" RadiusY="5" RadiusX="5" Stroke="Orange" VerticalAlignment="Top" Width="134" Margin="0,64,0,0" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="{Binding S,FallbackValue=0, Mode=TwoWay}"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle x:Name="PapadoInferior" x:FieldModifier="public" Fill="Orange" HorizontalAlignment="Left" Height="{Binding Q,FallbackValue=30, Mode=TwoWay}" RadiusY="5" RadiusX="5" Stroke="Orange" Width="134" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="{Binding T,FallbackValue=0, Mode=TwoWay}"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+    </Grid>
+</UserControl>

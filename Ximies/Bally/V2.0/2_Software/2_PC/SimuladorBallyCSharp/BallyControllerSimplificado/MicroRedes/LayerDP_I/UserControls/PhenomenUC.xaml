@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="BallyControllerSimplificado.MicroRedes.LayerDP_I.UserControls.PhenomenUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BallyControllerSimplificado.MicroRedes.LayerDP_I.UserControls"
+             mc:Ignorable="d">
+    <Grid>
+        <DockPanel>
+            <TextBox x:Name="TextBoxInputName" Text="Input" Width="50" VerticalContentAlignment="Center" Margin="2"/>
+            <Slider x:Name="SliderInput" Width="100" VerticalAlignment="Center" Margin="2"/>
+            <ProgressBar x:Name="ProgressBarValue" Width="50" Margin="2"/>
+            <Label x:Name="LabelDescriptionInput" Content="Description" Width="150"/>
+        </DockPanel>
+    </Grid>
+</UserControl>

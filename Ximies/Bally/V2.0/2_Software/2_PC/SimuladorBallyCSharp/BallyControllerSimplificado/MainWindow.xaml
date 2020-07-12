@@ -1,0 +1,330 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BallyControllerSimplificado"
+        xmlns:Cara="clr-namespace:BallyControllerSimplificado.Cara" x:Class="BallyControllerSimplificado.MainWindow"
+        mc:Ignorable="d"
+        Title="Bally 2.0 Controller" Height="478" Width="916">
+    <Grid Margin="0,0,0,-51">
+        <ToolBar HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100"/>
+        <TabControl Margin="0,100,0,35">
+            <TabItem Header="Cara">
+                <Grid Background="#FFE5E5E5">
+                    <Cara:Cara x:Name="CaraBally" Height="276" Margin="0,0,10,0" VerticalAlignment="Top" Width="316" HorizontalAlignment="Right" MouseMove="CaraBally_MouseMove"/>
+                    <TabControl Margin="10,10,331,8">
+                        <TabItem Header="Parametros">
+                            <TabControl Margin="0,0,-2,0">
+                                <TabItem Header="Ojos">
+                                    <Grid Background="#FFE5E5E5">
+                                        <StackPanel Grid.ColumnSpan="2">
+                                            <DockPanel>
+                                                <Label Content="X" Width="110"/>
+                                                <Slider x:Name="SliderX" Orientation="Horizontal" HorizontalAlignment="Left" Width="319" ValueChanged="SliderX_ValueChanged" />
+                                            </DockPanel>
+                                            <DockPanel>
+                                                <Label Content="Y" Width="110"/>
+                                                <Slider x:Name="SliderY" Orientation="Horizontal" HorizontalAlignment="Left" Width="319" ValueChanged="SliderY_ValueChanged" />
+                                            </DockPanel>
+                                            <DockPanel>
+                                                <Label Content="Dilatación" Width="110"/>
+                                                <Slider x:Name="SliderDilatacion" Orientation="Horizontal" HorizontalAlignment="Left" Width="319" ValueChanged="SliderDilatacion_ValueChanged" />
+                                            </DockPanel>
+                                            <DockPanel>
+                                                <Label Content="Apertura" Width="110"/>
+                                                <Slider x:Name="SliderApertura" Orientation="Horizontal" HorizontalAlignment="Left" Width="319" ValueChanged="SliderApertura_ValueChanged" />
+                                            </DockPanel>
+                                            <DockPanel>
+                                                <Label Content="Inclinacion Superior" Width="110"/>
+                                                <Slider x:Name="SliderInclinacionParapadoSuperior" Orientation="Horizontal" HorizontalAlignment="Left" Width="319" ValueChanged="SliderInclinacionParapadoSuperior_ValueChanged" />
+                                            </DockPanel>
+                                            <DockPanel>
+                                                <Label Content="Inclinación inferior" Width="110"/>
+                                                <Slider x:Name="SliderInclinacionParapadoInferior" Orientation="Horizontal" HorizontalAlignment="Left" Width="319" ValueChanged="SliderInclinacionParapadoInferior_ValueChanged" />
+                                            </DockPanel>
+                                        </StackPanel>
+                                    </Grid>
+                                </TabItem>
+                                <TabItem Header="Ojo Izquierdo">
+                                    <Grid Background="#FFE5E5E5">
+                                        <ScrollViewer HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Hidden">
+                                            <DockPanel x:Name="DockPanelOjoIzquierdo" ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Visible">
+                                                <StackPanel Margin="10" Width="30" HorizontalAlignment="Left">
+                                                    <Slider x:Name="SliderAIzq" Orientation="Vertical" Width="20" HorizontalAlignment="Center" Height="155" ValueChanged="SliderAIzq_ValueChanged"/>
+                                                    <Label Content="a" Width="20" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+                                                    <RadioButton GroupName="GroupFuzzy" x:Name="RadioButtonANegative" Content="\"/>
+                                                    <RadioButton GroupName="GroupFuzzy" x:Name="RadioButtonANormal" Content="/\"/>
+                                                    <RadioButton GroupName="GroupFuzzy" x:Name="RadioButtonAPositive" Content="/"/>
+                                                </StackPanel>
+                                                <StackPanel Margin="10" Width="20" HorizontalAlignment="Left">
+                                                    <Slider x:Name="SliderBIzq"  Orientation="Vertical" Width="20" HorizontalAlignment="Left" Height="155" ValueChanged="SliderBIzq_ValueChanged"/>
+                                                    <Label Content="b" Width="20" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+                                                </StackPanel>
+                                                <StackPanel Margin="10" Width="20" HorizontalAlignment="Left">
+                                                    <Slider x:Name="SliderCIzq" Orientation="Vertical" Width="20" HorizontalAlignment="Left" Height="155" ValueChanged="SliderCIzq_ValueChanged"/>
+                                                    <Label Content="c" Width="20" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+                                                </StackPanel>
+                                                <StackPanel Margin="10" Width="20" HorizontalAlignment="Left">
+                                                    <Slider x:Name="SliderDIzq"  Orientation="Vertical" Width="20" HorizontalAlignment="Left" Height="155" ValueChanged="SliderDIzq_ValueChanged"/>
+                                                    <Label Content="d" Width="20" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+                                                </StackPanel>
+                                                <StackPanel Margin="10" Width="20" HorizontalAlignment="Left">
+                                                    <Slider x:Name="SliderEIzq" Orientation="Vertical" Width="20" HorizontalAlignment="Left" Height="155" ValueChanged="SliderEIzq_ValueChanged"/>
+                                                    <Label Content="e" Width="20" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+                                                </StackPanel>
+                                                <StackPanel Margin="10" Width="20" HorizontalAlignment="Left">
+                                                    <Slider x:Name="SliderFIzq" Orientation="Vertical" Width="20" HorizontalAlignment="Left" Height="155" ValueChanged="SliderFIzq_ValueChanged"/>
+                                                    <Label Content="f" Width="20" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+                                                </StackPanel>
+                                                <StackPanel Margin="10" Width="20" HorizontalAlignment="Left">
+                                                    <Slider x:Name="SliderGIzq" Orientation="Vertical" Width="20" HorizontalAlignment="Left" Height="155" ValueChanged="SliderGIzq_ValueChanged"/>
+                                                    <Label Content="g" Width="20" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+                                                </StackPanel>
+                                                <StackPanel Margin="10" Width="20" HorizontalAlignment="Left">
+                                                    <Slider x:Name="SliderHIzq" Orientation="Vertical" Width="20" HorizontalAlignment="Left" Height="155" ValueChanged="SliderHIzq_ValueChanged"/>
+                                                    <Label Content="h" Width="20" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+                                                </StackPanel>
+                                                <StackPanel Margin="10" Width="20" HorizontalAlignment="Left">
+                                                    <Slider x:Name="SliderKIzq" Orientation="Vertical" Width="20" HorizontalAlignment="Left" Height="155" ValueChanged="SliderKIzq_ValueChanged"/>
+                                                    <Label Content="k" Width="20" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+                                                </StackPanel>
+                                                <StackPanel Margin="10" Width="20" HorizontalAlignment="Left">
+                                                    <Slider Name="SliderMIzq" Orientation="Vertical" Width="20" HorizontalAlignment="Left" Height="155" ValueChanged="SliderMIzq_ValueChanged"/>
+                                                    <Label Content="m" Width="20" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+                                                </StackPanel>
+                                                <StackPanel Margin="10" Width="20" HorizontalAlignment="Left">
+                                                    <Slider x:Name="SliderNIzq" Orientation="Vertical" Width="20" HorizontalAlignment="Left" Height="155" ValueChanged="SliderNIzq_ValueChanged"/>
+                                                    <Label Content="n" Width="20" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+                                                </StackPanel>
+                                                <StackPanel Margin="10" Width="20" HorizontalAlignment="Left">
+                                                    <Slider x:Name="SliderOIzq" Orientation="Vertical" Width="20" HorizontalAlignment="Left" Height="155" ValueChanged="SliderOIzq_ValueChanged"/>
+                                                    <Label Content="o" Width="20" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+                                                </StackPanel>
+                                                <StackPanel Margin="10" Width="20" HorizontalAlignment="Left">
+                                                    <Slider x:Name="SliderPIzq" Orientation="Vertical" Width="20" HorizontalAlignment="Left" Height="155" ValueChanged="SliderPIzq_ValueChanged"/>
+                                                    <Label Content="p" Width="20" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+                                                </StackPanel>
+                                                <StackPanel Margin="10" Width="20" HorizontalAlignment="Left">
+                                                    <Slider x:Name="SliderQIzq" Orientation="Vertical" Width="20" HorizontalAlignment="Left" Height="155" ValueChanged="SliderQIzq_ValueChanged"/>
+                                                    <Label Content="q" Width="20" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+                                                </StackPanel>
+                                                <StackPanel Margin="10" Width="20" HorizontalAlignment="Left">
+                                                    <Slider x:Name="SliderRIzq" Orientation="Vertical" Width="20" HorizontalAlignment="Left" Height="155" ValueChanged="SliderRIzq_ValueChanged"/>
+                                                    <Label Content="r" Width="20" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+                                                </StackPanel>
+                                                <StackPanel Margin="10" Width="20" HorizontalAlignment="Left">
+                                                    <Slider x:Name="SliderSIzq" Orientation="Vertical" Width="20" HorizontalAlignment="Left" Height="155" ValueChanged="SliderSIzq_ValueChanged"/>
+                                                    <Label Content="s" Width="20" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+                                                </StackPanel>
+                                                <StackPanel Margin="10" Width="20" HorizontalAlignment="Left">
+                                                    <Slider x:Name="SliderTIzq" Orientation="Vertical" Width="20" HorizontalAlignment="Left" Height="155" ValueChanged="SliderTIzq_ValueChanged"/>
+                                                    <Label Content="t" Width="20" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+                                                </StackPanel>
+                                            </DockPanel>
+                                        </ScrollViewer>
+                                    </Grid>
+                                </TabItem>
+                                <TabItem Header="Ojo Derecho">
+                                    <Grid Background="#FFE5E5E5">
+                                        <ScrollViewer HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Hidden">
+                                            <DockPanel x:Name="DockPanelOjoDerecho" ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Visible">
+                                                <StackPanel Margin="10" Width="20" HorizontalAlignment="Left">
+                                                    <Slider x:Name="SliderADer" Orientation="Vertical" Width="20" HorizontalAlignment="Left" Height="155" ValueChanged="SliderADer_ValueChanged"/>
+                                                    <Label Content="a" Width="20" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+                                                </StackPanel>
+                                                <StackPanel Margin="10" Width="20" HorizontalAlignment="Left">
+                                                    <Slider x:Name="SliderBDer"  Orientation="Vertical" Width="20" HorizontalAlignment="Left" Height="155" ValueChanged="SliderBDer_ValueChanged"/>
+                                                    <Label Content="b" Width="20" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+                                                </StackPanel>
+                                                <StackPanel Margin="10" Width="20" HorizontalAlignment="Left">
+                                                    <Slider x:Name="SliderCDer" Orientation="Vertical" Width="20" HorizontalAlignment="Left" Height="155" ValueChanged="SliderCDer_ValueChanged"/>
+                                                    <Label Content="c" Width="20" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+                                                </StackPanel>
+                                                <StackPanel Margin="10" Width="20" HorizontalAlignment="Left">
+                                                    <Slider x:Name="SliderDDer"  Orientation="Vertical" Width="20" HorizontalAlignment="Left" Height="155" ValueChanged="SliderDDer_ValueChanged"/>
+                                                    <Label Content="d" Width="20" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+                                                </StackPanel>
+                                                <StackPanel Margin="10" Width="20" HorizontalAlignment="Left">
+                                                    <Slider x:Name="SliderEDer" Orientation="Vertical" Width="20" HorizontalAlignment="Left" Height="155" ValueChanged="SliderEDer_ValueChanged"/>
+                                                    <Label Content="e" Width="20" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+                                                </StackPanel>
+                                                <StackPanel Margin="10" Width="20" HorizontalAlignment="Left">
+                                                    <Slider x:Name="SliderFDer" Orientation="Vertical" Width="20" HorizontalAlignment="Left" Height="155" ValueChanged="SliderFDer_ValueChanged"/>
+                                                    <Label Content="f" Width="20" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+                                                </StackPanel>
+                                                <StackPanel Margin="10" Width="20" HorizontalAlignment="Left">
+                                                    <Slider x:Name="SliderGDer" Orientation="Vertical" Width="20" HorizontalAlignment="Left" Height="155" ValueChanged="SliderGDer_ValueChanged"/>
+                                                    <Label Content="g" Width="20" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+                                                </StackPanel>
+                                                <StackPanel Margin="10" Width="20" HorizontalAlignment="Left">
+                                                    <Slider x:Name="SliderHDer" Orientation="Vertical" Width="20" HorizontalAlignment="Left" Height="155" ValueChanged="SliderHDer_ValueChanged"/>
+                                                    <Label Content="h" Width="20" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+                                                </StackPanel>
+                                                <StackPanel Margin="10" Width="20" HorizontalAlignment="Left">
+                                                    <Slider x:Name="SliderKDer" Orientation="Vertical" Width="20" HorizontalAlignment="Left" Height="155" ValueChanged="SliderKDer_ValueChanged"/>
+                                                    <Label Content="k" Width="20" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+                                                </StackPanel>
+                                                <StackPanel Margin="10" Width="20" HorizontalAlignment="Left">
+                                                    <Slider Name="SliderMDer" Orientation="Vertical" Width="20" HorizontalAlignment="Left" Height="155" ValueChanged="SliderMDer_ValueChanged"/>
+                                                    <Label Content="m" Width="20" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+                                                </StackPanel>
+                                                <StackPanel Margin="10" Width="20" HorizontalAlignment="Left">
+                                                    <Slider x:Name="SliderNDer" Orientation="Vertical" Width="20" HorizontalAlignment="Left" Height="155" ValueChanged="SliderNDer_ValueChanged"/>
+                                                    <Label Content="n" Width="20" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+                                                </StackPanel>
+                                                <StackPanel Margin="10" Width="20" HorizontalAlignment="Left">
+                                                    <Slider x:Name="SliderODer" Orientation="Vertical" Width="20" HorizontalAlignment="Left" Height="155" ValueChanged="SliderODer_ValueChanged"/>
+                                                    <Label Content="o" Width="20" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+                                                </StackPanel>
+                                                <StackPanel Margin="10" Width="20" HorizontalAlignment="Left">
+                                                    <Slider x:Name="SliderPDer" Orientation="Vertical" Width="20" HorizontalAlignment="Left" Height="155" ValueChanged="SliderPDer_ValueChanged"/>
+                                                    <Label Content="p" Width="20" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+                                                </StackPanel>
+                                                <StackPanel Margin="10" Width="20" HorizontalAlignment="Left">
+                                                    <Slider x:Name="SliderQDer" Orientation="Vertical" Width="20" HorizontalAlignment="Left" Height="155" ValueChanged="SliderQDer_ValueChanged"/>
+                                                    <Label Content="q" Width="20" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+                                                </StackPanel>
+                                                <StackPanel Margin="10" Width="20" HorizontalAlignment="Left">
+                                                    <Slider x:Name="SliderRDer" Orientation="Vertical" Width="20" HorizontalAlignment="Left" Height="155" ValueChanged="SliderRDer_ValueChanged"/>
+                                                    <Label Content="r" Width="20" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+                                                </StackPanel>
+                                                <StackPanel Margin="10" Width="20" HorizontalAlignment="Left">
+                                                    <Slider x:Name="SliderSDer" Orientation="Vertical" Width="20" HorizontalAlignment="Left" Height="155" ValueChanged="SliderSDer_ValueChanged"/>
+                                                    <Label Content="s" Width="20" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+                                                </StackPanel>
+                                                <StackPanel Margin="10" Width="20" HorizontalAlignment="Left">
+                                                    <Slider x:Name="SliderTDer" Orientation="Vertical" Width="20" HorizontalAlignment="Left" Height="155" ValueChanged="SliderTDer_ValueChanged"/>
+                                                    <Label Content="t" Width="20" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+                                                </StackPanel>
+                                            </DockPanel>
+                                        </ScrollViewer>
+                                    </Grid>
+                                </TabItem>
+
+                            </TabControl>
+                        </TabItem>
+                        <TabItem Header="Emociones">
+                            <Grid Background="#FFE5E5E5">
+                                <StackPanel Grid.ColumnSpan="2">
+                                    <DockPanel>
+                                        <CheckBox x:Name="CheckBoxSliderMiedo" Content="Miedo" Width="60"/>
+                                        <Slider  Orientation="Horizontal" HorizontalAlignment="Left" Width="319" />
+                                    </DockPanel>
+                                    <DockPanel>
+                                        <CheckBox x:Name="CheckBoxSliderIra" Content="Ira" Width="60"/>
+                                        <Slider  Orientation="Horizontal" HorizontalAlignment="Left" Width="319" />
+                                    </DockPanel>
+                                    <DockPanel>
+                                        <CheckBox x:Name="CheckBoxSliderAlegria" Content="Alegría" Width="60"/>
+                                        <Slider  Orientation="Horizontal" HorizontalAlignment="Left" Width="319" />
+                                    </DockPanel>
+                                    <DockPanel>
+                                        <CheckBox x:Name="CheckBoxSliderTristeza" Content="Tristeza" Width="60"/>
+                                        <Slider  Orientation="Horizontal" HorizontalAlignment="Left" Width="319" />
+                                    </DockPanel>
+                                    <DockPanel>
+                                        <Label Width="70" />
+                                        <RadioButton GroupName="FuzzyFunctionType" x:Name="RadioButtonSmall" Content="Small"/>
+                                        <RadioButton GroupName="FuzzyFunctionType" x:Name="RadioButtonNormal" Content="Normal"/>
+                                        <RadioButton GroupName="FuzzyFunctionType" x:Name="RadioButtonBig" Content="Big"/>
+                                        <Label Width="70" />
+                                        <CheckBox x:Name="CheckBoxSmall" IsEnabled="False" Content="Small"/>
+                                        <CheckBox x:Name="CheckBoxNormal" IsEnabled="False" Content="Normal"/>
+                                        <CheckBox x:Name="CheckBoxBig" IsEnabled="False" Content="Big"/>
+                                    </DockPanel>
+
+                                    <DockPanel>
+                                        <Button x:Name="ButtonDirectory" Content="Directory >>" Click="ButtonDirectory_Click"/>
+                                        <TextBox x:Name="TextBoxDirectoryConfigurationFile" IsReadOnly="True"/>
+                                    </DockPanel>
+                                    <Label Content="File name where configuration will be saved"/>
+                                    <TextBox x:Name="TextBoxConfigurationFile" TextChanged="TextBoxConfigurationFile_TextChanged"/>
+                                    <Button x:Name="ButtonSaveConfiguration" Content="Save configuration" Click="ButtonSaveConfiguration_Click"/>
+                                </StackPanel>
+                            </Grid>
+                        </TabItem>
+                    </TabControl>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Cuerpo">
+                <Grid Background="#FFE5E5E5">
+                    <StackPanel>
+                        <DockPanel>
+                            <Label Content="Cabeza (atrás-delante)" Width="135"/>
+                            <Slider x:Name="SliderCabeza" Orientation="Horizontal" HorizontalAlignment="Left" Width="319" ValueChanged="SliderCabeza_ValueChanged" />
+                        </DockPanel>
+                        <DockPanel>
+                            <Label Content="Cabeza giro (izq.-der.)" Width="135"/>
+                            <Slider x:Name="SliderCabezaGiro" Orientation="Horizontal" HorizontalAlignment="Left" Width="319" ValueChanged="SliderCabezaGiro_ValueChanged" />
+                        </DockPanel>
+                        <DockPanel>
+                            <Label Content="Esfera (atrás-adelante)" Width="135"/>
+                            <Slider x:Name="SliderEsfera" Orientation="Horizontal" HorizontalAlignment="Left" Width="319" ValueChanged="SliderEsfera_ValueChanged" />
+                        </DockPanel>
+                        <DockPanel>
+                            <Label Content="Brazo izq. (abrir-cerrar)" Width="135"/>
+                            <Slider x:Name="SliderBrazoIzquierdo" Orientation="Horizontal" HorizontalAlignment="Left" Width="319" ValueChanged="SliderBrazoIzquierdo_ValueChanged" />
+                        </DockPanel>
+                        <DockPanel>
+                            <Label Content="Brazo izq. (subir-bajar)" Width="135"/>
+                            <Slider x:Name="SliderBrazoSubirBajar" Orientation="Horizontal" HorizontalAlignment="Left" Width="319" ValueChanged="SliderBrazoIzquierdoSubirBajar_ValueChanged" />
+                        </DockPanel>
+                        <DockPanel>
+                            <Label Content="Brazo der. (abrir-cerrar)" Width="135"/>
+                            <Slider x:Name="SliderBrazoDerecho" Orientation="Horizontal" HorizontalAlignment="Left" Width="319" ValueChanged="SliderBrazoDerecho_ValueChanged" />
+                        </DockPanel>
+                        <DockPanel>
+                            <Label Content="Brazo der. (subir-bajar)" Width="135"/>
+                            <Slider x:Name="SliderBrazoDerechoSubirBajar" Orientation="Horizontal" HorizontalAlignment="Left" Width="319" ValueChanged="SliderBrazoDerechoSubirBajar_ValueChanged" />
+                        </DockPanel>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Fenomenos">
+                <Grid>
+                    <ProgressBar x:Name="ProgressBarMonitor" Margin="584,10,0,0" HorizontalAlignment="Left" Width="238" Height="19" VerticalAlignment="Top"/>
+                    <Slider x:Name="SliderValueInputForPhenomen" Margin="584,38,0,0" Height="19" VerticalAlignment="Top" ValueChanged="SliderValueInputForPhenomen_ValueChanged" HorizontalAlignment="Left" Width="238"/>
+                    <ListView x:Name="ListViewValuesAndPhenomena" Margin="0,62,0,0">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="t" Width="50" DisplayMemberBinding="{Binding Time}"/>
+                                <GridViewColumn Header="Value" Width="50" DisplayMemberBinding="{Binding Value}"/>
+                                <GridViewColumn Header="Bar">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <ProgressBar Height="20" Width="200" Minimum="{Binding Min, Mode=OneWay}" Maximum="{Binding Max, Mode=OneWay}"  Value="{Binding Value, Mode=OneWay}"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="Description" DisplayMemberBinding="{Binding Description}"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <Button x:Name="ButtonStartPhenomenSampling" Content="Start" HorizontalAlignment="Left" Margin="208,11,0,0" VerticalAlignment="Top" Width="75" Click="ButtonStartPhenomenSampling_Click"/>
+                    <Label Content="Input sample period (ms)" HorizontalAlignment="Left" Margin="10,7,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="TextBoxSamplePeriod" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="23" Margin="158,10,0,0" TextWrapping="Wrap" Text="100" VerticalAlignment="Top" Width="34" TextChanged="TextBoxSamplePeriod_TextChanged"/>
+                    <Label Content="Min" Margin="509,7,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31"/>
+                    <Label Content="Max" Margin="866,7,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="32"/>
+                    <TextBox x:Name="TextBoxMin" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="23" Margin="545,8,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="34" TextChanged="TextBoxMin_TextChanged"/>
+                    <TextBox x:Name="TextBoxMax" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="23" Margin="827,8,0,0" TextWrapping="Wrap" Text="255" VerticalAlignment="Top" Width="34" TextChanged="TextBoxMax_TextChanged"/>
+                    <Button x:Name="ButtonStopPhenomenSampling" Content="Stop" HorizontalAlignment="Left" Margin="288,11,0,0" VerticalAlignment="Top" Width="75" Click="ButtonStopPhenomenSampling_Click"/>
+                    <Button x:Name="ButtonClear" Content="Clear" HorizontalAlignment="Left" Margin="368,11,0,0" VerticalAlignment="Top" Width="65" Click="ButtonClear_Click"/>
+                    <Label Content="Sensor Id" HorizontalAlignment="Left" Margin="10,33,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="TextBoxSensorId" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="23" Margin="74,35,0,0" TextWrapping="Wrap" Text="SA" VerticalAlignment="Top" Width="34"/>
+                    <CheckBox x:Name="CheckBoxShowValue" Content="Show values" HorizontalAlignment="Left" Margin="113,39,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Description level" HorizontalAlignment="Left" Margin="296,33,0,0" VerticalAlignment="Top"/>
+                    <Slider x:Name="SliderDescriptionLevel" Margin="438,38,0,0" Maximum="5" Minimum="0" Value="5" Height="19" VerticalAlignment="Top" ValueChanged="SliderDescriptionLevel_ValueChanged" HorizontalAlignment="Left" Width="65"/>
+                    <TextBox x:Name="TextBoxLevel" IsReadOnly="True" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="23" Margin="399,35,0,0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="34" />
+                    <CheckBox x:Name="CheckBoxComposition" Content="Composition" HorizontalAlignment="Left" Margin="203,39,0,0" VerticalAlignment="Top"/>
+                </Grid>
+            </TabItem>
+
+
+
+
+
+        </TabControl>
+        <StatusBar Height="35" VerticalAlignment="Bottom"/>
+    </Grid>
+</Window>

@@ -1,0 +1,12 @@
+﻿<UserControl x:Class="BallyControllerSimplificado.Cara.Cara"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BallyControllerSimplificado.Cara"
+             mc:Ignorable="d" Width="317.391" Height="273.913" BorderThickness="1" BorderBrush="Gray">
+    <Grid x:Name="GridCaraBally" x:FieldModifier="public">
+        <local:Ojo x:Name="OjoIzquierdo" x:FieldModifier="public"  HorizontalAlignment="Left" Height="178" Margin="10,10,0,0" VerticalAlignment="Top" Width="134"/>
+        <local:Ojo x:Name="OjoDerecho" x:FieldModifier="public" HorizontalAlignment="Left" Height="178" Margin="173,10,0,0" VerticalAlignment="Top" Width="134"/>
+    </Grid>
+</UserControl>

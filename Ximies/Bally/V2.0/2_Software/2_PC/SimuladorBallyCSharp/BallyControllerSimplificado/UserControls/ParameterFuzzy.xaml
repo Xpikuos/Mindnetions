@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="BallyControllerSimplificado.UserControls.ParameterFuzzy"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BallyControllerSimplificado.UserControls"
+             mc:Ignorable="d">
+    <Grid>
+        <StackPanel Margin="10" Width="30" HorizontalAlignment="Left">
+            <Slider x:Name="SliderParameterValue" Orientation="Vertical" Width="20" HorizontalAlignment="Center" Height="155" ValueChanged="SliderParameterValue_ValueChanged"/>
+            <Label Content="a" Width="20" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+            <RadioButton GroupName="GroupFuzzy" x:Name="RadioButtonFuzzyNegative" Content="\" HorizontalAlignment="Right" Width="30" Checked="RadioButtonFuzzyNegative_Checked"/>
+            <RadioButton GroupName="GroupFuzzy" x:Name="RadioButtonFuzzyNormal" Content="/\" Checked="RadioButtonFuzzyNormal_Checked"/>
+            <RadioButton GroupName="GroupFuzzy" x:Name="RadioButtonFuzzyPositive" Content="/" Checked="RadioButtonFuzzyPositive_Checked"/>
+        </StackPanel>
+    </Grid>
+</UserControl>
