@@ -1,1 +1,4 @@
-Place all general documents here.
+Coloca toda los docmumentos genéricos aquí.
+-------------------------------------------
+Place all generic documents here.
+
