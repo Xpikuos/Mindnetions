@@ -14,8 +14,13 @@ import pygame
 - Para: Xpikuos
 - Version: 20.07.20.18.36.00
 - Descripción: Transforma texto en sonido (TTS). Idioma español. Para instalarlo, previamente hay que instalar las siguientes dependencias:
+    sudo apt install alsa-base
+    sudo apt install pulseaudio
     sudo apt install espeak
     sudo apt install mbrola mbrola-es1 mbrola-es2
+    -> si no funciona:
+        wget http://steinerdatenbank.de/software/mbrola3.0.1h_armhf.deb
+        sudo dpkg -i mbrola3.0.1h_armhf.deb
     sudo pip3 install soundfile pyworld pygame
 Puedes probarlo con:
 python3 
