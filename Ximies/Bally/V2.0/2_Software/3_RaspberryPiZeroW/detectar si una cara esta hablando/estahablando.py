@@ -13,7 +13,8 @@ import dlib #sudo pip3 install dlib
 import math
 import cv2 #sudo pip3 install opencv-contrib-python==4.1.0.25
 
-path = 'Data/' #donde tenemos el predictor de dlib
+path = 'Data/' #donde tenemos el predictor de dlib 
+#descargar de http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2 y descomprimir 
 
 #devuelve True o False si se estan moviendo o no los labios
 
