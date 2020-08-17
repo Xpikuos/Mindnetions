@@ -39,7 +39,7 @@ while 1:
         contador = 0
         mascara = cv2.cvtColor(resta,cv2.COLOR_BGR2GRAY)
         buscar(mascara)
-        cv2.imshow('resta',resta)
+        #cv2.imshow('resta',resta)
     k = cv2.waitKey(1)
     if k == 27:
         break
