@@ -1,0 +1,4 @@
+sudo apt install -y mosquitto mosquitto-clients #instala mqtt
+sudo systemctl enable mosquitto.service # hace que se inicie al arranca la pi3
+mosquitto -v  # prueba para ver si está funcionando
+
